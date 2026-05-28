@@ -1,4 +1,4 @@
-
+//FUNCIÓN PARA ILUMINAR DETERMINADO LED, EN FUNCIÓN DEL STOCK
 void ilumina_led(int pinmin, int pinmax, int stock) {
   if (stock < 5) {
     // Tramo 1: Sin stock (Menor que 5) -> Desactiva la salida de ambos pines
@@ -23,11 +23,11 @@ void ilumina_led(int pinmin, int pinmax, int stock) {
 }
 
 
-
+// FUNCIÓN PARA SIMULAR UNA ALERTA, QUE SUENA CUANDO UN TRABAJADOR ENTRA EN UNA ZONA NO DESEADA
+// LO SIMULAMOS DE MANERA QUE SI EL SENSOR HALL DETECTA UN CAMPO MAGNÉTICO, PUES SUENA EL BUZZER
 void comprobarImanYAlerta(int pinhall, int pinbuzz) {
   static bool pinesConfigurados = false;
   if (!pinesConfigurados) {
-    // CAMBIO CLAVE: Activamos la resistencia interna para que el pin no se quede sordo
     pinMode(pinhall, INPUT_PULLUP);   
     pinMode(pinbuzz, OUTPUT);  
     pinesConfigurados = true; 
@@ -36,9 +36,7 @@ void comprobarImanYAlerta(int pinhall, int pinbuzz) {
   static int ultimaLectura = -1; 
   int lecturaSensor = digitalRead(pinhall);
 
-  // =======================================================================
-  // OPCIÓN 1: Lógica Directa (Si tu sensor de verdad manda HIGH con imán)
-  // =======================================================================
+
   if (lecturaSensor == LOW) { 
     digitalWrite(pinbuzz, HIGH); 
     if (ultimaLectura != lecturaSensor) {
@@ -49,7 +47,7 @@ void comprobarImanYAlerta(int pinhall, int pinbuzz) {
   else {
     digitalWrite(pinbuzz, LOW);  
     if (ultimaLectura != lecturaSensor) {
-      Serial.println("Imán NO retirado");
+      Serial.println("Imán DETECTADO");
       ultimaLectura = lecturaSensor;
     }
   }}
