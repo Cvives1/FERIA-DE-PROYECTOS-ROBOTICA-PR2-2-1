@@ -11,7 +11,7 @@
 
 // WIFI
 #define NET_SSID                  "Redmi Note 9 Pro"
-#define NET_PASSWD                "987654321"
+#define NET_PASSWD                "12345678"
 
 // MQTT
 #define MQTT_SERVER_IP            "broker.emqx.io"
@@ -19,6 +19,7 @@
 #define MQTT_USERNAME             "giirob"    // Descomentar esta línea (y la siguiente) para que se conecte al broker MQTT usando usuario y contraseña
 #define MQTT_PASSWORD             "UPV2024"
 
+// APARTADO DE CALIDAD
 #define HELLO_TOPIC "giirob/pr2/estacion/hola"
 #define CALIDAD_MANDAR_TOPIC          "giirob/pr2/estacion/calidad/mandar"
 
@@ -31,7 +32,7 @@
 #define SI_ANOMALIA "tirar"
 
 
-
+//APARTADO DISPENSADOR
 enum sensor_estado
 {
   DETECTADO,
@@ -73,9 +74,9 @@ enum calidad
 #define CINTA_ON "on"
 #define CINTA_OFF "off"
 
+// DEFINES ELEMENTOS ADICIONALES EN LA PROTOBOARD
 
-
-#define PINUADILD 15
+#define PINUADILD 15 //BOTON
 
 #define PINMAX1 16 
 #define PINMIN1 17
