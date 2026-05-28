@@ -1,0 +1,24 @@
+SET search_path TO robofruit;
+
+DROP TABLE IF EXISTS Tupper CASCADE;
+DROP TABLE IF EXISTS Stock CASCADE;
+
+-- Tabla de tupper
+CREATE TABLE Tupper (
+    id SERIAL PRIMARY KEY,
+
+    estado VARCHAR(20) NOT NULL CHECK (
+        estado IN ('Contaminado', 'Valido')
+    ),
+
+    fecha TIMESTAMP NOT NULL
+);
+
+CREATE TABLE Stock (
+    id SERIAL PRIMARY KEY,
+    fruta VARCHAR(20) NOT NULL CHECK (
+        fruta IN ('Piña', 'Manzana', 'Uva', 'Kiwi', 'Sandia', 'Melon')
+    ),
+    pesaje INT NOT NULL,
+    fecha TIMESTAMP NOT NULL
+);
