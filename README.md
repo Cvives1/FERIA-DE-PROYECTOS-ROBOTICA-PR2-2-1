@@ -1,14 +1,15 @@
 # Feria de Proyectos de Robotica
 
-Repositorio organizado para separar la parte del ESP32, la base de datos y la estacion RoboDK.
+Este README solo explica la organizacion general del repositorio. Para la explicacion tecnica del codigo, la referencia es la carpeta del proyecto Arduino.
 
 ## Estructura del repositorio
 
 ```text
 arduino/
   ESP32-S3-IoT-Device/
-    codigo del ESP32-S3
-  __MACOSX/ESP32-S3-IoT-Device/
+    codigo principal del ESP32-S3  
+
+  __MACOSX/ESP32-S3-IoT-Device/  (carpeta auxiliar del paquete)
 
 base_de_datos/
 
