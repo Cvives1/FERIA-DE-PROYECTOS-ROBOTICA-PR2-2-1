@@ -22,10 +22,10 @@ estacion_RoboDK/
 Aqui se encuentra el codigo principal del proyecto, en arduino.
 
 ### `base_de_datos/`
-Carpeta reservada para todo lo relacionado con la base de datos del proyecto: scripts, exportaciones, estructura de tablas o ficheros de apoyo.
+Carpeta reservada para todo lo relacionado con la base de datos del proyecto.
 
 ### `estacion_RoboDK/`
-Carpeta reservada para la estacion de trabajo de RoboDK, simulaciones, programas o archivos asociados a la parte robotica.
+Carpeta reservada para la estacion de trabajo de RoboDK.
 
 ## Objetivo de esta organizacion
 
