@@ -1,4 +1,4 @@
-# Explicacion detallada del codigo del dispositivo IoT ESP32-S3
+# Explicacion detallada del codigo 
 
 ## 1. Visión general del proyecto
 
